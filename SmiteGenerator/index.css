@@ -6,6 +6,10 @@ body {
     width: 15%;
 }
 
+#mode_list {
+    width: 15%;
+}
+
 #god_selector {
     margin-left: 1%;
 }
