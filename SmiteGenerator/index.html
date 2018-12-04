@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div id="god_selector" class="form-group">
+        <label for="sel1"><h1>Choose a god:</h1></label>
+        <select id="god_list" class="form-control" id="sel1">
+                <option>Achilles<option>
+                <option>Agni<option>
+                <option>Ah Muzen Cab<option>
+                <option>Ah Puch<option>
+                <option>Amaterasu<option>
+                <option>Anhur<option>
+                <option>Anubis<option>
+                <option>Ao Kuang<option>
+                <option>Aphrodite<option>
+                <option>Apollo<option>
+                <option>Arachne<option>
+                <option>Ares<option>
+                <option>Artemis<option>
+                <option>Arthur<option>
+                <option>Artio<option>
+                <option>Athena<option>
+                <option>Awilix<option>
+                <option>Bacchus<option>
+                <option>Bakasura<option>
+                <option>Baron Samedi<option>
+                <option>Bastet<option>
+                <option>Bellona<option>
+                <option>Cabrakan<option>
+                <option>Camazotz<option>
+                <option>Cerberus<option>
+                <option>Cernunnos<option>
+                <option>Chaac<option>
+                <option>Chang'e<option>
+                <option>Chernobog<option>
+                <option>Chiron<option>
+                <option>Chronos<option>
+                <option>Cu Chulainn<option>
+                <option>Cupid<option>
+                <option>Da Ji<option>
+                <option>Discordia<option>
+                <option>Erlang Shen<option>
+                <option>Fafnir<option>
+                <option>Fenrir<option>
+                <option>Freya<option>
+                <option>Ganesha<option>
+                <option>Geb<option>
+                <option>Guan Yu<option>
+                <option>Hachiman<option>
+                <option>Hades<option>
+                <option>He Bo<option>
+                <option>Hel<option>
+                <option>Hera<option>
+                <option>Hercules<option>
+                <option>Hou Yi<option>
+                <option>Hun Batz<option>
+                <option>Isis<option>
+                <option>Izanami<option>
+                <option>Janus<option>
+                <option>Jing Wei<option>
+                <option>Kali<option>
+                <option>Khepri<option>
+                <option>Kukulkan<option>
+                <option>Kumbhakarna<option>
+                <option>Kuzenbo<option>
+                <option>Loki<option>
+                <option>Medusa<option>
+                <option>Mercury<option>
+                <option>Ne Zha<option>
+                <option>Neith<option>
+                <option>Nemesis<option>
+                <option>Nike<option>
+                <option>Nox<option>
+                <option>Nu Wa<option>
+                <option>Odin<option>
+                <option>Osiris<option>
+                <option>Pele<option>
+                <option>Poseidon<option>
+                <option>Ra<option>
+                <option>Raijin<option>
+                <option>Rama<option>
+                <option>Ratatoskr<option>
+                <option>Ravana<option>
+                <option>Scylla<option>
+                <option>Serqet<option>
+                <option>Skadi<option>
+                <option>Sobek<option>
+                <option>Sol<option>
+                <option>Sun Wukong<option>
+                <option>Susano<option>
+                <option>Sylvanus<option>
+                <option>Terra<option>
+                <option>Thanatos<option>
+                <option>The Morrigan<option>
+                <option>Thor<option>
+                <option>Thoth<option>
+                <option>Tyr<option>
+                <option>Ullr<option>
+                <option>Vamana<option>
+                <option>Vulcan<option>
+                <option>Xbalanque<option>
+                <option>Xing Tian<option>
+                <option>Ymir<option>
+                <option>Zeus<option>
+                <option>Zhong Kui<option>
+        </select>
+        <button style="margin-top: .5%; margin-left:11%;" type="button" class="btn btn-primary">Submit</button>
+    </div>
+    <script>
+        gods = ['Achilles', 'Agni', 'Ah Muzen Cab', 'Ah Puch', 'Amaterasu', 'Anhur', 'Anubis', 'Ao Kuang', 'Aphrodite', 'Apollo', 'Arachne', 'Ares', 'Artemis', 'Arthur', 'Artio', 'Athena', 'Awilix', 'Bacchus', 'Bakasura', 'Baron Samedi', 'Bastet', 'Bellona', 'Cabrakan', 'Camazotz', 'Cerberus', 'Cernunnos', 'Chaac', "Chang'e", 'Chernobog', 'Chiron', 'Chronos', 'Cu Chulainn', 'Cupid', 'Da Ji', 'Discordia', 'Erlang Shen', 'Fafnir', 'Fenrir', 'Freya', 'Ganesha', 'Geb', 'Guan Yu', 'Hachiman', 'Hades', 'He Bo', 'Hel', 'Hera', 'Hercules', 'Hou Yi', 'Hun Batz', 'Isis', 'Izanami', 'Janus', 'Jing Wei', 'Kali', 'Khepri', 'Kukulkan', 'Kumbhakarna', 'Kuzenbo', 'Loki', 'Medusa', 'Mercury', 'Ne Zha', 'Neith', 'Nemesis', 'Nike', 'Nox', 'Nu Wa', 'Odin', 'Osiris', 'Pele', 'Poseidon', 'Ra', 'Raijin', 'Rama', 'Ratatoskr', 'Ravana', 'Scylla', 'Serqet', 'Skadi', 'Sobek', 'Sol', 'Sun Wukong', 'Susano', 'Sylvanus', 'Terra', 'Thanatos', 'The Morrigan', 'Thor', 'Thoth', 'Tyr', 'Ullr', 'Vamana', 'Vulcan', 'Xbalanque', 'Xing Tian', 'Ymir', 'Zeus', 'Zhong Kui']
+        assassains = ['Arachne', 'Awilix', 'Bakasura', 'Bastet', 'Camazotz', 'Da Ji', 'Fenrir', 'Hun Batz', 'Kali', 'Loki', 'Mercury', 'Ne Zha', 'Nemesis', 'Pele', 'Ratatoskr', 'Ravana', 'Serqet', 'Susano', 'Thanatos', 'Thor']
+        guardians = ['Ares', 'Artio', 'Athena', 'Bacchus', 'Cabrakan', 'Cerberus', 'Fafnir', 'Ganesha', 'Geb', 'Khepri', 'Kumbhakarna', 'Kuzenbo', 'Sobek', 'Sylvanus', 'Terra', 'Xing Tian', 'Ymir']
+        mages = ['Agni', 'Ah Puch', 'Anubis', 'Ao Kuang', 'Aphrodite', 'Baron Samedi', "Chang'e", 'Chronos', 'Discordia', 'Freya', 'Hades', 'He Bo', 'Hel', 'Hera', 'Isis', 'Janus', 'Kukulkan', 'Nox', 'Nu Wa', 'Poseidon', 'Ra', 'Raijin', 'Scylla', 'Sol', 'The Morrigan', 'Thoth', 'Vulcan', 'Zeus', 'Zhong Kui']
+        warriors = ['Achilles', 'Amaterasu', 'Bellona', 'Chaac', 'Cu Chulainn', 'Erlang Shen', 'Guan Yu', 'Hercules', 'King Arthur', 'Nike', 'Odin', 'Osiris', 'Sun Wukong', 'Tyr', 'Vamana']
+        hunters = ['Ah Muzen Cab', 'Anhur', 'Apollo', 'Artemis', 'Cernunnos', 'Chernobog', 'Chiron', 'Cupid', 'Hachiman', 'Hou Yi', 'Izanami', 'Jing Wei', 'Medusa', 'Neith']
+    
+        relics = ['Purification Beads', 'Heavenly Wings', 'Blink Rune', 'Cursed Ankh', 'Meditation Cloak', 'Phantom Veil', 'Aegis Amulet', 'Magic Shell', 'Sundering Spear', 'Teleport Glyph', 'Shield of Thorns', 'Horrific Emblem', 'Bracer of Undoing', 'Belt of Frenzy']
+        consumables = ['Potion of Magical Might', 'Potion of Physical Might', 'Healing Potion', 'Mana Potion', 'Ward', 'Elixir of Power', 'Elixir of Defense', 'Sentry Ward', 'Multi Potion', 'Chalice of Healing', 'Chalice of Mana', 'Chalice of the Oracle']
+        basic_items = 
+        physical_items = 
+        physical_melee = ['Masamune (2500)', 'Golden Blade (2200)', 'Hastened Katana (2200)', 'Stone Cutting Sword (2500)']
+        magical_items = 
+        ratatoskr_items = ['Acorn of Yggdrasil (1600)']
+        barons_consumables = ['Baron\'s Brew']
+        //TODO masks
+        blessings = ["Assassin's Blessing (700)", "Attacker's Blessing (700)", "Defender's Blessing (700)", "Guardian's Blessing (700)", "Hunter's Blessing (700)", "Specialist's Blessing (700)", "Warrior's Blessing (700)"]
+    </script>
+  </body>
+</html>

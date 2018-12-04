@@ -1,0 +1,11 @@
+body {
+    background-color: lightblue;
+}
+
+#god_list {
+    width: 15%;
+}
+
+#god_selector {
+    display: inline;
+}
