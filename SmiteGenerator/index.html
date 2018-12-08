@@ -138,7 +138,7 @@
   </form>
   <div class="container" style="margin: 0 auto; width: 50%;">
     <ul id="items1">
-      
+
     </ul>
     <ul id="items2">
 
@@ -225,16 +225,62 @@
       shuffle(selected_consumables);
       shuffle(selected_relics);
 
-      $("#items1").empty();
-      $("#items2").empty();
-      $("#items3").empty();
 
-      $("#items1").append("<li>" + selected_blessings[0] + "</li>");
-      $("#items1").append("<li>" + selected_items[0] + ", " + selected_items[1] + ", " + selected_items[2] + ", " + selected_items[3] + ", " + selected_items[4] + ", " + selected_items[5] + "</li>");
+      // get elements
+      const items1Element = document.querySelector('#items1');
+      const items2Element = document.querySelector('#items2');
+      const items3Element = document.querySelector('#items3');
 
-      $("#items2").append("<li>" + selected_consumables[0] + ", " + selected_consumables[1] + "</li>");
+      // clear out lists
+      items1Element.innerHTML = '';
+      items2Element.innerHTML = '';
+      items3Element.innerHTML = '';
 
-      $("#items3").append("<li>" + selected_relics[0] + ", " + selected_relics[1] + "</li>");
+      // Add the random blessing to the list
+      const blessingElement = document.createElement('li');
+      blessingElement.innerHTML = selected_blessings[0];
+      items1Element.appendChild(blessingElement);
+
+      // add 6 items to the list
+      let item1InnerHTML = '';
+      for (let i = 0; i <= 5; i++) {
+        item1InnerHTML += selected_items[i];
+        if (i + 1 <= 5) {
+          // if not last iteration, add commma
+          item1InnerHTML += ', ';
+        }
+      }
+      // create the li and add the inner html
+      const itemListElement = document.createElement('li');
+      itemListElement.innerHTML = item1InnerHTML;
+      items1Element.appendChild(itemListElement);
+
+      // add 2 consumables to list
+      let item2InnerHTML = '';
+      for (let i = 0; i <= 1; i++) {
+        item2InnerHTML += selected_consumables[i];
+        if (i + 1 <= 1) {
+          item2InnerHTML += ', ';
+        }
+      }
+      // create the li and add inner html
+      const consumableListElement = document.createElement('li');
+      consumableListElement.innerHTML = item2InnerHTML;
+      items2Element.appendChild(consumableListElement);
+
+      // add 2 relics to list
+      let item3InnerHTML = '';
+      for (let i = 0; i <= 1; i++) {
+        item3InnerHTML += selected_relics[i];
+        if (i + 1 <= 1) {
+          item3InnerHTML += ', ';
+        }
+      }
+      // create the li and add inner html
+      const relicListElement = document.createElement('li');
+      relicListElement.innerHTML = item3InnerHTML;
+      items3Element.appendChild(relicListElement);
+
     });
 
     function shuffle(a) {
