@@ -253,7 +253,7 @@
       // add 2 consumables to list
       let item2InnerHTML = '';
       for (let i = 0; i <= 1; i++) {
-        item2InnerHTML += selected_consumables[i];
+        item2InnerHTML += get_pic(selected_consumables[i]);
         if (i + 1 <= 1) {
           item2InnerHTML += ', ';
         }
@@ -266,7 +266,7 @@
       // add 2 relics to list
       let item3InnerHTML = '';
       for (let i = 0; i <= 1; i++) {
-        item3InnerHTML += selected_relics[i];
+        item3InnerHTML += get_pic(selected_relics[i]);
         if (i + 1 <= 1) {
           item3InnerHTML += ', ';
         }
