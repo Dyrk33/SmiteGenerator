@@ -174,7 +174,7 @@
       selected_mode = $("#mode_list option:selected").text();
       selected_consumables = consumables;
       selected_relics = relics;
-      selected_blessings = [];
+      selected_blessings = conquest_blessings;
       selected_items = basic_items;
       selected_items = selected_items.concat(general_masks);
 
@@ -192,32 +192,27 @@
         selected_items = selected_items.concat(physical_items);
         selected_items = selected_items.concat(physical_melee);
         selected_items = selected_items.concat(mage_hunter_assassain_mask);
-        selected_blessings = selected_blessings.concat(conquest_blessings[0]);
       }
 
       if (guardians.includes(selected_god)) {
         selected_items = selected_items.concat(magical_items);
         selected_items = selected_items.concat(warrior_guardian_mask);
-        selected_blessings = selected_blessings.concat(conquest_blessings[1]);
       }
 
       if (mages.includes(selected_god)) {
         selected_items = selected_items.concat(magical_items);
         selected_items = selected_items.concat(mage_hunter_assassain_mask);
-        selected_blessings = selected_blessings.concat(conquest_blessings[4]);
       }
 
       if (warriors.includes(selected_god)) {
         selected_items = selected_items.concat(physical_items);
         selected_items = selected_items.concat(physical_melee);
         selected_items = selected_items.concat(warrior_guardian_mask);
-        selected_blessings = selected_blessings.concat(conquest_blessings[3]);
       }
 
       if (hunters.includes(selected_god)) {
         selected_items = selected_items.concat(mage_hunter_assassain_mask);
         selected_items = selected_items.concat(physical_items);
-        selected_blessings = selected_blessings.concat(conquest_blessings[2]);
       }
 
       shuffle(selected_blessings);
@@ -225,12 +220,14 @@
       shuffle(selected_consumables);
       shuffle(selected_relics);
 
+
       $("#items1").empty();
       $("#items2").empty();
       $("#items3").empty();
 
       $("#items1").append("<li>" + selected_blessings[0] + "</li>");
-      $("#items1").append("<li>" + selected_items[0] + ", " + selected_items[1] + ", " + selected_items[2] + ", " + selected_items[3] + ", " + selected_items[4] + ", " + selected_items[5] + "</li>");
+
+      $("#items1").append("<li>" + get_pic(selected_items[0]) + ", " + get_pic(selected_items[1]) + ", " + get_pic(selected_items[2]) + ", " + get_pic(selected_items[3]) + ", " + get_pic(selected_items[4]) + ", " + get_pic(selected_items[5]) + "</li>");
 
       $("#items2").append("<li>" + selected_consumables[0] + ", " + selected_consumables[1] + "</li>");
 
@@ -246,6 +243,15 @@
         a[j] = x;
       }
       return a;
+    }
+
+    function get_pic(item_name) {
+      item_name = item_name.toLowerCase();
+      item_name = item_name.replace(/ /g, '-')
+      item_name = item_name.replace('\'', '')
+
+      item_pic = "<img src=\"https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg\">"
+      return item_pic;
     }
   </script>
 </body>
