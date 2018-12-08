@@ -123,7 +123,13 @@
           <button id="submit" style="margin-top: .5%; margin-left:12%;" type="button" class="btn btn-primary">Roll</button>
       </div>
     </form>
-    <ul id="items">
+    <ul id="items1">
+      
+    </ul>
+    <ul id="items2">
+      
+    </ul>
+    <ul id="items3">
       
     </ul>
     <script>
@@ -203,19 +209,16 @@
           shuffle(selected_consumables);
           shuffle(selected_relics);
 
-          $("#items").empty();
+          $("#items1").empty();
+          $("#items2").empty();
+          $("#items3").empty();
 
-          $("#items").append("<li>" + selected_blessings[0] + "</li>");
-          $("#items").append("<li>" + selected_items[0] + "</li>");
-          $("#items").append("<li>" + selected_items[1] + "</li>");
-          $("#items").append("<li>" + selected_items[2] + "</li>");
-          $("#items").append("<li>" + selected_items[3] + "</li>");
-          $("#items").append("<li>" + selected_items[4] + "</li>");
-          $("#items").append("<li>" + selected_items[5] + "</li>");
-          $("#items").append("<li>" + selected_consumables[0] + "</li>");
-          $("#items").append("<li>" + selected_consumables[1] + "</li>");
-          $("#items").append("<li>" + selected_relics[0] + "</li>");
-          $("#items").append("<li>" + selected_relics[1] + "</li>");
+          $("#items1").append("<li>" + selected_blessings[0] + "</li>");
+          $("#items1").append("<li>" + selected_items[0] + ", " + selected_items[1] + ", " + selected_items[2] + ", " + selected_items[3] + ", " + selected_items[4] + ", " + selected_items[5] + "</li>");
+
+          $("#items2").append("<li>" + selected_consumables[0] + ", " + selected_consumables[1] + "</li>");
+
+          $("#items3").append("<li>" + selected_relics[0] + ", " + selected_relics[1] +  "</li>");
         });
 
         function shuffle(a) {
