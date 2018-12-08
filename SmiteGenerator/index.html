@@ -233,7 +233,7 @@
 
       // Add the random blessing to the list
       const blessingElement = document.createElement('li');
-      blessingElement.innerHTML = selected_blessings[0];
+      blessingElement.innerHTML = get_pic(selected_blessings[0]);
       items1Element.appendChild(blessingElement);
 
       // add 6 items to the list
@@ -290,14 +290,27 @@
     }
 
     function get_pic(item_name) {
-      item_name = item_name.toLowerCase();
-      item_name = item_name.replace(/ /g, '-')
-      item_name = item_name.replace('\'', '')
+      item_pic = ""
 
-      item_pic = "<img src=\"https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg\">"
+      if (selected_blessings.includes(item_name)) {
+        item_name = item_name.replace(/ /g, '');
+        item_name = item_name.replace('\'', '');
+        item_pic = "<img src=\"https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/c/ca/" + item_name + "_T1.png\" width=\"128\" height=\"128\">"
+      } else {
+        item_name = item_name.toLowerCase();
+        item_name = item_name.replace(/ /g, '-');
+        item_name = item_name.replace('\'', '');
+        item_pic = "<img src=\"https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg\">"
+      }
+
       return item_pic;
+    }
+
+    function get_blessing_pic(item_name) {
+
     }
   </script>
 </body>
+
 
 </html>
