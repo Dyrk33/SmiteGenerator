@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <title>Smite Build Generator</title>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
     crossorigin="anonymous"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
@@ -12,130 +13,135 @@
 
 
 <body>
-  <label for="sel1">
-    <h1 style="text-align: center;">Choose a god:</h1>
-  </label>
-  <form id="god_selector">
-    <div class="row">
-      <div class="six columns">
-        <select id="god_list" class="u-full-width">
-          <option>Achilles</option>
-          <option>Agni</option>
-          <option>Ah Muzen Cab</option>
-          <option>Ah Puch</option>
-          <option>Amaterasu</option>
-          <option>Anhur</option>
-          <option>Anubis</option>
-          <option>Ao Kuang</option>
-          <option>Aphrodite</option>
-          <option>Apollo</option>
-          <option>Arachne</option>
-          <option>Ares</option>
-          <option>Artemis</option>
-          <option>Arthur</option>
-          <option>Artio</option>
-          <option>Athena</option>
-          <option>Awilix</option>
-          <option>Bacchus</option>
-          <option>Bakasura</option>
-          <option>Baron Samedi</option>
-          <option>Bastet</option>
-          <option>Bellona</option>
-          <option>Cabrakan</option>
-          <option>Camazotz</option>
-          <option>Cerberus</option>
-          <option>Cernunnos</option>
-          <option>Chaac</option>
-          <option>Chang'e</option>
-          <option>Chernobog</option>
-          <option>Chiron</option>
-          <option>Chronos</option>
-          <option>Cu Chulainn</option>
-          <option>Cupid</option>
-          <option>Da Ji</option>
-          <option>Discordia</option>
-          <option>Erlang Shen</option>
-          <option>Fafnir</option>
-          <option>Fenrir</option>
-          <option>Freya</option>
-          <option>Ganesha</option>
-          <option>Geb</option>
-          <option>Guan Yu</option>
-          <option>Hachiman</option>
-          <option>Hades</option>
-          <option>He Bo</option>
-          <option>Hel</option>
-          <option>Hera</option>
-          <option>Hercules</option>
-          <option>Hou Yi</option>
-          <option>Hun Batz</option>
-          <option>Isis</option>
-          <option>Izanami</option>
-          <option>Janus</option>
-          <option>Jing Wei</option>
-          <option>Kali</option>
-          <option>Khepri</option>
-          <option>Kukulkan</option>
-          <option>Kumbhakarna</option>
-          <option>Kuzenbo</option>
-          <option>Loki</option>
-          <option>Medusa</option>
-          <option>Mercury</option>
-          <option>Ne Zha</option>
-          <option>Neith</option>
-          <option>Nemesis</option>
-          <option>Nike</option>
-          <option>Nox</option>
-          <option>Nu Wa</option>
-          <option>Odin</option>
-          <option>Osiris</option>
-          <option>Pele</option>
-          <option>Poseidon</option>
-          <option>Ra</option>
-          <option>Raijin</option>
-          <option>Rama</option>
-          <option>Ratatoskr</option>
-          <option>Ravana</option>
-          <option>Scylla</option>
-          <option>Serqet</option>
-          <option>Skadi</option>
-          <option>Sobek</option>
-          <option>Sol</option>
-          <option>Sun Wukong</option>
-          <option>Susano</option>
-          <option>Sylvanus</option>
-          <option>Terra</option>
-          <option>Thanatos</option>
-          <option>The Morrigan</option>
-          <option>Thor</option>
-          <option>Thoth</option>
-          <option>Tyr</option>
-          <option>Ullr</option>
-          <option>Vamana</option>
-          <option>Vulcan</option>
-          <option>Xbalanque</option>
-          <option>Xing Tian</option>
-          <option>Ymir</option>
-          <option>Zeus</option>
-          <option>Zhong Kui</option>
-        </select>
-      </div>
 
-      <div class="six columns">
+  <header>
+    <h1 style="text-align: center;">Smite Build Generator</h1>
+  </header>
+  <main>
+    <form id="god_selector">
+      <div class="row">
+        <div class="six columns">
+          <label for="god_list">God:</label>
+          <select id="god_list" name="god_list" class="u-full-width">
+            <option>Achilles</option>
+            <option>Agni</option>
+            <option>Ah Muzen Cab</option>
+            <option>Ah Puch</option>
+            <option>Amaterasu</option>
+            <option>Anhur</option>
+            <option>Anubis</option>
+            <option>Ao Kuang</option>
+            <option>Aphrodite</option>
+            <option>Apollo</option>
+            <option>Arachne</option>
+            <option>Ares</option>
+            <option>Artemis</option>
+            <option>Arthur</option>
+            <option>Artio</option>
+            <option>Athena</option>
+            <option>Awilix</option>
+            <option>Bacchus</option>
+            <option>Bakasura</option>
+            <option>Baron Samedi</option>
+            <option>Bastet</option>
+            <option>Bellona</option>
+            <option>Cabrakan</option>
+            <option>Camazotz</option>
+            <option>Cerberus</option>
+            <option>Cernunnos</option>
+            <option>Chaac</option>
+            <option>Chang'e</option>
+            <option>Chernobog</option>
+            <option>Chiron</option>
+            <option>Chronos</option>
+            <option>Cu Chulainn</option>
+            <option>Cupid</option>
+            <option>Da Ji</option>
+            <option>Discordia</option>
+            <option>Erlang Shen</option>
+            <option>Fafnir</option>
+            <option>Fenrir</option>
+            <option>Freya</option>
+            <option>Ganesha</option>
+            <option>Geb</option>
+            <option>Guan Yu</option>
+            <option>Hachiman</option>
+            <option>Hades</option>
+            <option>He Bo</option>
+            <option>Hel</option>
+            <option>Hera</option>
+            <option>Hercules</option>
+            <option>Hou Yi</option>
+            <option>Hun Batz</option>
+            <option>Isis</option>
+            <option>Izanami</option>
+            <option>Janus</option>
+            <option>Jing Wei</option>
+            <option>Kali</option>
+            <option>Khepri</option>
+            <option>Kukulkan</option>
+            <option>Kumbhakarna</option>
+            <option>Kuzenbo</option>
+            <option>Loki</option>
+            <option>Medusa</option>
+            <option>Mercury</option>
+            <option>Ne Zha</option>
+            <option>Neith</option>
+            <option>Nemesis</option>
+            <option>Nike</option>
+            <option>Nox</option>
+            <option>Nu Wa</option>
+            <option>Odin</option>
+            <option>Osiris</option>
+            <option>Pele</option>
+            <option>Poseidon</option>
+            <option>Ra</option>
+            <option>Raijin</option>
+            <option>Rama</option>
+            <option>Ratatoskr</option>
+            <option>Ravana</option>
+            <option>Scylla</option>
+            <option>Serqet</option>
+            <option>Skadi</option>
+            <option>Sobek</option>
+            <option>Sol</option>
+            <option>Sun Wukong</option>
+            <option>Susano</option>
+            <option>Sylvanus</option>
+            <option>Terra</option>
+            <option>Thanatos</option>
+            <option>The Morrigan</option>
+            <option>Thor</option>
+            <option>Thoth</option>
+            <option>Tyr</option>
+            <option>Ullr</option>
+            <option>Vamana</option>
+            <option>Vulcan</option>
+            <option>Xbalanque</option>
+            <option>Xing Tian</option>
+            <option>Ymir</option>
+            <option>Zeus</option>
+            <option>Zhong Kui</option>
+          </select>
+        </div>
 
-        <select id="mode_list" class="u-full-width">
-          <option>Conquest</option>
-          <option>Arena</option>
-          <option>Assault</option>
-          <option>Joust</option>
-          <option>Siege</option>
-          <option>Clash</option>
-          <option>Duel</option>
-        </select>
+        <div class="six columns">
+          <label for="mode_list">Gamemode:</label>
+          <select id="mode_list" name="mode_list" class="u-full-width">
+            <option>Conquest</option>
+            <option>Arena</option>
+            <option>Assault</option>
+            <option>Joust</option>
+            <option>Siege</option>
+            <option>Clash</option>
+            <option>Duel</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <button id="submit" type="button" class="button button-primary u-full-width">Roll</button>
-  </form>
+      <button id="submit" type="button" class="button button-primary u-full-width">Roll</button>
+    </form>
+  </main>
+
   <div class="container" style="margin: 0 auto; width: 75%;">
     <ul class="unstyled" id="items1">
 
