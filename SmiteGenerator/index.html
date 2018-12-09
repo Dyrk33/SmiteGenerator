@@ -233,15 +233,14 @@
 
       // Add the random blessing to the list
       const blessingElement = document.createElement('li');
-      blessingElement.appendChild(get_pic(selected_blessings[0]));
+      append_img_with_loading(get_pic(selected_blessings[0]), blessingElement);
       items1Element.appendChild(blessingElement);
 
       // add 6 items to the list
       const itemListElement = document.createElement('li');
       for (let i = 0; i <= 5; i++) {
         let img = get_pic(selected_items[i]);
-        img.style.paddingRight = '4px';
-        itemListElement.appendChild(img);
+        append_img_with_loading(img, itemListElement);
       }
       // create the li and add the inner html
       items1Element.appendChild(itemListElement);
@@ -250,8 +249,7 @@
       const consumableListElement = document.createElement('li');
       for (let i = 0; i <= 1; i++) {
         let img = get_pic(selected_consumables[i]);
-        img.style.paddingRight = '4px';
-        consumableListElement.appendChild(img);
+        append_img_with_loading(img, consumableListElement);
       }
       items2Element.appendChild(consumableListElement);
 
@@ -259,8 +257,7 @@
       const relicListElement = document.createElement('li');
       for (let i = 0; i <= 1; i++) {
         let img = get_pic(selected_relics[i]);
-        img.style.paddingRight = '4px';
-        relicListElement.appendChild(img);
+        append_img_with_loading(img, relicListElement);
       }
       items3Element.appendChild(relicListElement);
 
@@ -277,6 +274,32 @@
       return a;
     }
 
+    function append_img_with_loading(imgElement, parentElement) {
+      let loading = document.createElement('img');
+      loading.src = 'loading.gif';
+
+      // configure sizes of images
+      loading.style.width = '128px';
+      loading.style.height = '128px';
+      imgElement.style.width = '128px';
+      imgElement.style.height = '128px';
+      loading.style.paddingRight = '4px';
+      imgElement.style.paddingRight = '4px';
+
+      // hide image until it's loaded
+      imgElement.style.display = 'none';
+
+      // add both images to parent
+      parentElement.appendChild(loading);
+      parentElement.appendChild(imgElement);
+
+      // draw loading image until real image is loaded
+      imgElement.addEventListener('load', event => {
+        loading.style.display = 'none';
+        imgElement.style.display = '';
+      });
+    }
+
     function get_pic(item_name) {
       const itemImg = document.createElement('img');
       if (selected_blessings.includes(item_name)) {
@@ -289,7 +312,6 @@
         item_name = item_name.replace('\'', '');
         itemImg.src = "https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg";
       }
-
       return itemImg;
     }
 
