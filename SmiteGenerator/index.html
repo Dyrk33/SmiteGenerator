@@ -233,47 +233,35 @@
 
       // Add the random blessing to the list
       const blessingElement = document.createElement('li');
-      blessingElement.innerHTML = get_pic(selected_blessings[0]);
+      blessingElement.appendChild(get_pic(selected_blessings[0]));
       items1Element.appendChild(blessingElement);
 
       // add 6 items to the list
-      let item1InnerHTML = '';
+      const itemListElement = document.createElement('li');
       for (let i = 0; i <= 5; i++) {
-        item1InnerHTML += get_pic(selected_items[i]);
-        if (i + 1 <= 5) {
-          // if not last iteration, add commma
-          item1InnerHTML += ' ';
-        }
+        let img = get_pic(selected_items[i]);
+        img.style.paddingRight = '4px';
+        itemListElement.appendChild(img);
       }
       // create the li and add the inner html
-      const itemListElement = document.createElement('li');
-      itemListElement.innerHTML = item1InnerHTML;
       items1Element.appendChild(itemListElement);
 
       // add 2 consumables to list
-      let item2InnerHTML = '';
-      for (let i = 0; i <= 1; i++) {
-        item2InnerHTML += get_pic(selected_consumables[i]);
-        if (i + 1 <= 1) {
-          item2InnerHTML += ' ';
-        }
-      }
-      // create the li and add inner html
       const consumableListElement = document.createElement('li');
-      consumableListElement.innerHTML = item2InnerHTML;
+      for (let i = 0; i <= 1; i++) {
+        let img = get_pic(selected_consumables[i]);
+        img.style.paddingRight = '4px';
+        consumableListElement.appendChild(img);
+      }
       items2Element.appendChild(consumableListElement);
 
       // add 2 relics to list
-      let item3InnerHTML = '';
-      for (let i = 0; i <= 1; i++) {
-        item3InnerHTML += get_pic(selected_relics[i]);
-        if (i + 1 <= 1) {
-          item3InnerHTML += ' ';
-        }
-      }
-      // create the li and add inner html
       const relicListElement = document.createElement('li');
-      relicListElement.innerHTML = item3InnerHTML;
+      for (let i = 0; i <= 1; i++) {
+        let img = get_pic(selected_relics[i]);
+        img.style.paddingRight = '4px';
+        relicListElement.appendChild(img);
+      }
       items3Element.appendChild(relicListElement);
 
     });
@@ -290,20 +278,19 @@
     }
 
     function get_pic(item_name) {
-      item_pic = ""
-
+      const itemImg = document.createElement('img');
       if (selected_blessings.includes(item_name)) {
         item_name = item_name.replace(/ /g, '');
         item_name = item_name.replace('\'', '');
-        item_pic = "<img src=\"https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/c/ca/" + item_name + "_T1.png\" width=\"128\" height=\"128\">"
+        itemImg.src = "https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/c/ca/" + item_name + "_T1.png";
       } else {
         item_name = item_name.toLowerCase();
         item_name = item_name.replace(/ /g, '-');
         item_name = item_name.replace('\'', '');
-        item_pic = "<img src=\"https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg\">"
+        itemImg.src = "https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg";
       }
 
-      return item_pic;
+      return itemImg;
     }
 
     function get_blessing_pic(item_name) {
