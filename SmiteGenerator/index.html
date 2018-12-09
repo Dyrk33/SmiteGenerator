@@ -168,6 +168,10 @@
     blessings = ["Attacker's Blessing", "Defender's Blessing", "Specialist's Blessing"]
     conquest_blessings = ["Assassin's Blessing", "Guardian's Blessing", "Hunter's Blessing", "Warrior's Blessing", "Mage's Blessing"]
 
+    // image sizes in string form
+    const IMG_SIZES = '128px';
+    const IMG_PADDING = '4px';
+
     //TODO: clear lists at end???
     $("#submit").click(function () {
       selected_god = $("#god_list option:selected").text();
@@ -214,6 +218,8 @@
         selected_items = selected_items.concat(mage_hunter_assassain_mask);
         selected_items = selected_items.concat(physical_items);
       }
+
+
 
       shuffle(selected_blessings);
       shuffle(selected_items);
@@ -279,12 +285,12 @@
       loading.src = 'loading.gif';
 
       // configure sizes of images
-      loading.style.width = '128px';
-      loading.style.height = '128px';
-      imgElement.style.width = '128px';
-      imgElement.style.height = '128px';
-      loading.style.paddingRight = '4px';
-      imgElement.style.paddingRight = '4px';
+      loading.style.width = IMG_SIZES;
+      loading.style.height = IMG_SIZES;
+      imgElement.style.width = IMG_SIZES;
+      imgElement.style.height = IMG_SIZES;
+      loading.style.paddingRight = IMG_PADDING;
+      imgElement.style.paddingRight = IMG_PADDING;
 
       // hide image until it's loaded
       imgElement.style.display = 'none';
