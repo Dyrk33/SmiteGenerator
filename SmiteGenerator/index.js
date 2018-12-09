@@ -1,21 +1,24 @@
-assassains = ['Arachne', 'Awilix', 'Bakasura', 'Bastet', 'Camazotz', 'Da Ji', 'Fenrir', 'Hun Batz', 'Kali', 'Loki', 'Mercury', 'Ne Zha', 'Nemesis', 'Pele', 'Ratatoskr', 'Ravana', 'Serqet', 'Susano', 'Thanatos', 'Thor']
-guardians = ['Ares', 'Artio', 'Athena', 'Bacchus', 'Cabrakan', 'Cerberus', 'Fafnir', 'Ganesha', 'Geb', 'Khepri', 'Kumbhakarna', 'Kuzenbo', 'Sobek', 'Sylvanus', 'Terra', 'Xing Tian', 'Ymir']
-mages = ['Agni', 'Ah Puch', 'Anubis', 'Ao Kuang', 'Aphrodite', 'Baron Samedi', "Chang'e", 'Chronos', 'Discordia', 'Freya', 'Hades', 'He Bo', 'Hel', 'Hera', 'Isis', 'Janus', 'Kukulkan', 'Nox', 'Nu Wa', 'Poseidon', 'Ra', 'Raijin', 'Scylla', 'Sol', 'The Morrigan', 'Thoth', 'Vulcan', 'Zeus', 'Zhong Kui']
-warriors = ['Achilles', 'Amaterasu', 'Bellona', 'Chaac', 'Cu Chulainn', 'Erlang Shen', 'Guan Yu', 'Hercules', 'King Arthur', 'Nike', 'Odin', 'Osiris', 'Sun Wukong', 'Tyr', 'Vamana']
-hunters = ['Ah Muzen Cab', 'Anhur', 'Apollo', 'Artemis', 'Cernunnos', 'Chernobog', 'Chiron', 'Cupid', 'Hachiman', 'Hou Yi', 'Izanami', 'Jing Wei', 'Medusa', 'Neith']
-relics = ['Purification Beads', 'Heavenly Wings', 'Blink Rune', 'Cursed Ankh', 'Meditation Cloak', 'Phantom Veil', 'Aegis Amulet', 'Magic Shell', 'Sundering Spear', 'Teleport Glyph', 'Shield of Thorns', 'Horrific Emblem', 'Bracer of Undoing', 'Belt of Frenzy']
-consumables = ['Potion of Magical Might', 'Potion of Physical Might', 'Healing Potion', 'Mana Potion', 'Ward', 'Elixir of Power', 'Elixir of Defense', 'Sentry Ward', 'Multi Potion', 'Chalice of Healing', 'Chalice of Mana', 'Chalice of the Oracle']
-basic_items = ["Oni Hunter's Garb", "Genji's Guard", 'Breastplate of Valor', 'Mantle of Discord', 'Spirit Robe', 'Witchblade', "Shogun's Kusari", 'Spectral Armor', 'Relic Dagger', 'Shield of Regrowth', 'Hide of the Urchin', "Emperor's Armor", "Magi's Cloak", 'Stone of Gaia', 'Pestilence', 'Winged Blade', 'Bulwark of Hope', 'Sovereignty', 'Mail of Renewal', 'Heartward Amulet', 'Gauntlet of Thebes', 'Midgardian Mail', 'Hide of the Nemean Lion', 'Mystical Mail', 'Talisman of Energy']
-physical_items = ["Odysseus' Bow", 'Toxic Blade', 'Asi', 'Ninja Tabi', 'Reinforced Greaves', 'Talaria Boots', 'Warrior Tabi', 'Ancile', "Atalanta's Bow", "Berserker's Shield", 'Blackthorn Hammer', 'Bloodforge', "Brawler's Beat Stick", 'Deathbringer', "Devourer's Gauntlet", 'Frostbound Hammer', "Gladiator's Shield", 'Heartseeker', "Hydra's Lament", 'Ichaival', "Jotunn's Wrath", 'Malice', 'Poisoned Star', "Qin's Sais", 'Rage', 'Runeforged Hammer', 'Runic Shield', "Shifter's Shield", 'Silverbranch Bow', 'Soul Eater', 'The Crusher', 'The Executioner', "Titan's Bane", 'Transcendence', 'Void Shield', 'Wind Demon']
-physical_melee = ['Masamune', 'Golden Blade', 'Hastened Katana', 'Stone Cutting Sword']
-magical_items = ["Bancroft's Talon", 'Book of the Dead', 'Book of Thoth', 'Celestial Legion Helm', "Chronos' Pendant", 'Demonic Grip', 'Divine Ruin', 'Doom Orb', 'Dynasty Plate Helm', 'Ethereal Staff', 'Gem of Isolation', 'Hastened Ring', "Jade Emperor's Crown", 'Lotus Crown', 'Obsidian Shard', 'Polynomicon', "Pythagorem's Piece", 'Rod of Asclepius', 'Rod of Tahuti', "Shaman's Ring", 'Soul Gem', 'Soul Reaver', 'Spear of Desolation', 'Spear of the Magus', 'Stone of Binding', 'Stone of Fal', 'Telkhines Ring', "Typhon's Fang", 'Void Stone', "Warlock's Staff"]
-ratatoskr_items = ['Acorn of Yggdrasil']
-barons_consumables = ['Baron\'s Brew']
-general_masks = ["Bumba's Mask"]
-warrior_guardian_mask = ["Rangda's Mask"]
-mage_hunter_assassain_mask = ["Lono's Mask"]
-blessings = ["Attacker's Blessing", "Defender's Blessing", "Specialist's Blessing"]
-conquest_blessings = ["Assassin's Blessing", "Guardian's Blessing", "Hunter's Blessing", "Warrior's Blessing", "Mage's Blessing"]
+const assassains = ['Arachne', 'Awilix', 'Bakasura', 'Bastet', 'Camazotz', 'Da Ji', 'Fenrir', 'Hun Batz', 'Kali', 'Loki', 'Mercury', 'Ne Zha', 'Nemesis', 'Pele', 'Ratatoskr', 'Ravana', 'Serqet', 'Susano', 'Thanatos', 'Thor']
+const guardians = ['Ares', 'Artio', 'Athena', 'Bacchus', 'Cabrakan', 'Cerberus', 'Fafnir', 'Ganesha', 'Geb', 'Khepri', 'Kumbhakarna', 'Kuzenbo', 'Sobek', 'Sylvanus', 'Terra', 'Xing Tian', 'Ymir']
+const mages = ['Agni', 'Ah Puch', 'Anubis', 'Ao Kuang', 'Aphrodite', 'Baron Samedi', "Chang'e", 'Chronos', 'Discordia', 'Freya', 'Hades', 'He Bo', 'Hel', 'Hera', 'Isis', 'Janus', 'Kukulkan', 'Nox', 'Nu Wa', 'Poseidon', 'Ra', 'Raijin', 'Scylla', 'Sol', 'The Morrigan', 'Thoth', 'Vulcan', 'Zeus', 'Zhong Kui']
+const warriors = ['Achilles', 'Amaterasu', 'Bellona', 'Chaac', 'Cu Chulainn', 'Erlang Shen', 'Guan Yu', 'Hercules', 'King Arthur', 'Nike', 'Odin', 'Osiris', 'Sun Wukong', 'Tyr', 'Vamana']
+const hunters = ['Ah Muzen Cab', 'Anhur', 'Apollo', 'Artemis', 'Cernunnos', 'Chernobog', 'Chiron', 'Cupid', 'Hachiman', 'Hou Yi', 'Izanami', 'Jing Wei', 'Medusa', 'Neith']
+const relics = ['Purification Beads', 'Heavenly Wings', 'Blink Rune', 'Cursed Ankh', 'Meditation Cloak', 'Phantom Veil', 'Aegis Amulet', 'Magic Shell', 'Sundering Spear', 'Teleport Glyph', 'Shield of Thorns', 'Horrific Emblem', 'Bracer of Undoing', 'Belt of Frenzy']
+const consumables = ['Potion of Magical Might', 'Potion of Physical Might', 'Healing Potion', 'Mana Potion', 'Ward', 'Elixir of Power', 'Elixir of Defense', 'Sentry Ward', 'Multi Potion', 'Chalice of Healing', 'Chalice of Mana', 'Chalice of the Oracle']
+const basic_items = ["Oni Hunter's Garb", "Genji's Guard", 'Breastplate of Valor', 'Mantle of Discord', 'Spirit Robe', 'Witchblade', "Shogun's Kusari", 'Spectral Armor', 'Relic Dagger', 'Shield of Regrowth', 'Hide of the Urchin', "Emperor's Armor", "Magi's Cloak", 'Stone of Gaia', 'Pestilence', 'Winged Blade', 'Bulwark of Hope', 'Sovereignty', 'Mail of Renewal', 'Heartward Amulet', 'Gauntlet of Thebes', 'Midgardian Mail', 'Hide of the Nemean Lion', 'Mystical Mail', 'Talisman of Energy']
+const physical_items = ["Odysseus' Bow", 'Toxic Blade', 'Asi', 'Ninja Tabi', 'Reinforced Greaves', 'Talaria Boots', 'Warrior Tabi', 'Ancile', "Atalanta's Bow", "Berserker's Shield", 'Blackthorn Hammer', 'Bloodforge', "Brawler's Beat Stick", 'Deathbringer', "Devourer's Gauntlet", 'Frostbound Hammer', "Gladiator's Shield", 'Heartseeker', "Hydra's Lament", 'Ichaival', "Jotunn's Wrath", 'Malice', 'Poisoned Star', "Qin's Sais", 'Rage', 'Runeforged Hammer', 'Runic Shield', "Shifter's Shield", 'Silverbranch Bow', 'Soul Eater', 'The Crusher', 'The Executioner', "Titan's Bane", 'Transcendence', 'Void Shield', 'Wind Demon']
+const physical_melee = ['Masamune', 'Golden Blade', 'Hastened Katana', 'Stone Cutting Sword']
+const magical_items = ["Bancroft's Talon", 'Book of the Dead', 'Book of Thoth', 'Celestial Legion Helm', "Chronos' Pendant", 'Demonic Grip', 'Divine Ruin', 'Doom Orb', 'Dynasty Plate Helm', 'Ethereal Staff', 'Gem of Isolation', 'Hastened Ring', "Jade Emperor's Crown", 'Lotus Crown', 'Obsidian Shard', 'Polynomicon', "Pythagorem's Piece", 'Rod of Asclepius', 'Rod of Tahuti', "Shaman's Ring", 'Soul Gem', 'Soul Reaver', 'Spear of Desolation', 'Spear of the Magus', 'Stone of Binding', 'Stone of Fal', 'Telkhines Ring', "Typhon's Fang", 'Void Stone', "Warlock's Staff"]
+const ratatoskr_items = ['Acorn of Yggdrasil']
+const barons_consumables = ['Baron\'s Brew']
+const general_masks = ["Bumba's Mask"]
+const warrior_guardian_mask = ["Rangda's Mask"]
+const mage_hunter_assassain_mask = ["Lono's Mask"]
+const blessings = ["Attacker's Blessing", "Defender's Blessing", "Specialist's Blessing"]
+const conquest_blessings = ["Assassin's Blessing", "Guardian's Blessing", "Hunter's Blessing", "Warrior's Blessing", "Mage's Blessing"]
+
+// needed for functions defined outside of the on-submit event function
+let selected_blessings; 
 
 // image sizes in string form
 const IMG_SIZES = '128px';
@@ -23,12 +26,12 @@ const IMG_PADDING = '4px';
 
 //TODO: clear lists at end???
 $("#submit").click(function () {
-  selected_god = $("#god_list option:selected").text();
-  selected_mode = $("#mode_list option:selected").text();
-  selected_consumables = consumables;
-  selected_relics = relics;
+  let selected_god = $("#god_list option:selected").text();
+  let selected_mode = $("#mode_list option:selected").text();
+  let selected_consumables = consumables;
+  let selected_relics = relics;
   selected_blessings = conquest_blessings;
-  selected_items = basic_items;
+  let selected_items = basic_items;
   selected_items = selected_items.concat(general_masks);
 
   if (selected_mode !== "Conquest") {
@@ -97,7 +100,6 @@ $("#submit").click(function () {
     let img = get_pic(selected_items[i]);
     append_img_with_loading(img, itemListElement);
   }
-  // create the li and add the inner html
   items1Element.appendChild(itemListElement);
 
   // add 2 consumables to list
@@ -130,7 +132,7 @@ function shuffle(a) {
 }
 
 function append_img_with_loading(imgElement, parentElement) {
-  let loading = document.createElement('img');
+  const loading = document.createElement('img');
   loading.src = 'loading.gif';
 
   // configure sizes of images
@@ -144,11 +146,11 @@ function append_img_with_loading(imgElement, parentElement) {
   // hide image until it's loaded
   imgElement.style.display = 'none';
 
-  // add both images to parent
+  // add both images to parent, drawing the loading image
   parentElement.appendChild(loading);
   parentElement.appendChild(imgElement);
 
-  // draw loading image until real image is loaded
+  // when image is loaded, stop drawing loading image and draw real image
   imgElement.addEventListener('load', event => {
     loading.style.display = 'none';
     imgElement.style.display = '';
