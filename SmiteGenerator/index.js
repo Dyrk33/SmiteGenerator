@@ -177,22 +177,22 @@ function append_img_with_loading(imgElement, parentElement) {
 }
 
 function get_pic(item_name) {
-  let pretty_name = item_name;
   const itemImg = document.createElement('img');
-  if (selected_blessings.includes(item_name)) {
-    item_name = item_name.replace(/ /g, '');
-    item_name = item_name.replace('\'', '');
-    itemImg.src = "https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/c/ca/" + item_name + "_T1.png";
-  } else {
-    item_name = item_name.toLowerCase();
-    item_name = item_name.replace(/ /g, '-');
-    item_name = item_name.replace('\'', '');
-    itemImg.src = "https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg";
-  }
+  itemImg.title = item_name;
+  item_name = item_name.toLowerCase();
+  item_name = item_name.replace(/ /g, '-');
+  item_name = item_name.replace('\'', '');
+  itemImg.src = "https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg";
   itemImg.title = pretty_name;
   return itemImg;
 }
 
 function get_blessing_pic(item_name) {
-
+  const itemImg = document.createElement('img');
+  itemImg.title = item_name;
+  item_name = item_name.replace(/ /g, '');
+  item_name = item_name.replace(/\'/, '');
+  itemImg.src = "Graphics/" + item_name + ".png";
+  itemImg.title = pretty_name;
+  return itemImg;
 }
