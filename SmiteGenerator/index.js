@@ -152,7 +152,7 @@ function shuffle(a) {
 
 function append_img_with_loading(imgElement, parentElement) {
   const loading = document.createElement('img');
-  loading.src = 'loading.gif';
+  loading.src = 'Graphics/loading.gif';
 
   // configure sizes of images
   loading.style.width = IMG_SIZES;
@@ -183,7 +183,6 @@ function get_pic(item_name) {
   item_name = item_name.replace(/ /g, '-');
   item_name = item_name.replace('\'', '');
   itemImg.src = "https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg";
-  itemImg.title = pretty_name;
   return itemImg;
 }
 
