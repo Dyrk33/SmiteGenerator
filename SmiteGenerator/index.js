@@ -80,19 +80,38 @@ $("#submit").click(function () {
 
 
   // get elements
+  const blessingUL = document.querySelector('#blessing');
   const items1Element = document.querySelector('#items1');
   const items2Element = document.querySelector('#items2');
   const items3Element = document.querySelector('#items3');
 
   // clear out lists
+  blessingUL.innerHTML = '';
   items1Element.innerHTML = '';
   items2Element.innerHTML = '';
   items3Element.innerHTML = '';
 
+  // Add titles to each list
+  let blessingTitle = document.createElement('h4');
+  blessingTitle.innerHTML = 'Blessing:';
+  blessingUL.appendChild(blessingTitle);
+
+  let item1Title = document.createElement('h4');
+  item1Title.innerHTML = 'Equipment:';
+  items1Element.appendChild(item1Title);
+
+  let item2Title = document.createElement('h4');
+  item2Title.innerHTML = 'Consumables:';
+  items2Element.appendChild(item2Title);
+
+  let item3Title = document.createElement('h4');
+  item3Title.innerHTML = 'Relics:';
+  items3Element.appendChild(item3Title);
+
   // Add the random blessing to the list
   const blessingElement = document.createElement('li');
   append_img_with_loading(get_pic(selected_blessings[0]), blessingElement);
-  items1Element.appendChild(blessingElement);
+  blessingUL.appendChild(blessingElement);
 
   // add 6 items to the list
   const itemListElement = document.createElement('li');
@@ -158,6 +177,7 @@ function append_img_with_loading(imgElement, parentElement) {
 }
 
 function get_pic(item_name) {
+  let pretty_name = item_name;
   const itemImg = document.createElement('img');
   if (selected_blessings.includes(item_name)) {
     item_name = item_name.replace(/ /g, '');
@@ -169,6 +189,7 @@ function get_pic(item_name) {
     item_name = item_name.replace('\'', '');
     itemImg.src = "https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg";
   }
+  itemImg.title = pretty_name;
   return itemImg;
 }
 
