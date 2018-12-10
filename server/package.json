@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for Smite Build Generator",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Smite",
+    "Build",
+    "Generator"
+  ],
+  "author": "Michael Behm and Derek Boyer",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
