@@ -221,20 +221,28 @@ function get_pic(item_name) {
     item_name = item_name.replace(/ /g, '');
     item_name = item_name.replace(/\'/, '');
     itemImg.src = "Graphics/" + item_name + "_T3.png";
-    return itemImg;
-  } else if (item_name === 'Heartseeker') { //special case for heartseaker
+  //special case for heartseaker
+  } else if (item_name === 'Heartseeker') { 
     itemImg.src = "https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/9/97/Heartseeker_T3.png?version=6fdb168d908c99e05dea8fb7614344a7";
-    return itemImg;
-  } else if (item_name === "Magi's Cloak") {  //special case for magis cloak
+  //special case for magis cloak
+  } else if (item_name === "Magi's Cloak") {  
     itemImg.src = "https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/1/18/MagisBlessing_T3.png?version=5fcceaa928978ae11bb17768d5a55bc9";
-    return itemImg;
+  //Special case for travelers shoes
+  } else if (item_name === "Traveler's Shoes") {
+    itemImg.src = "https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/5/51/TravelersShoes_T3.png?version=cd9965b1b490a06fc62fb931cae8d1f0";
+  //Special case for talaria boots
+  } else if (item_name === 'Talaria Boots') {
+    itemImg.src = "https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/4/45/TalariaBoots_T3.png?version=3c3cfddef0025c8880e6d6181a9e54ab";
+  } else if (item_name === "Book of Thoth") {
+    itemImg.src = src="https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/2/2c/BookofThoth_T3.png?version=da20ce2db39e96c74f0df1e659d62231";
+  } else {
+    itemImg.title = item_name;
+    item_name = item_name.toLowerCase();
+    item_name = item_name.replace(/ /g, '-');
+    item_name = item_name.replace('\'', '');
+    itemImg.src = "https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg";
   }
 
-  itemImg.title = item_name;
-  item_name = item_name.toLowerCase();
-  item_name = item_name.replace(/ /g, '-');
-  item_name = item_name.replace('\'', '');
-  itemImg.src = "https://web2.hirez.com/smite/item-icons/" + item_name + ".jpg";
   return itemImg;
 }
 
