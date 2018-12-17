@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
 }
 
+#tip {
+    text-align: center;
+}
+
 .unstyled {
     list-style-type: none;
 }
