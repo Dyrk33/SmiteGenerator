@@ -11,7 +11,7 @@ const basic_items = ["Oni Hunter's Garb", "Genji's Guard", 'Breastplate of Valor
 const physical_items = ['Ninja Tabi', 'Reinforced Greaves', 'Talaria Boots', 'Warrior Tabi', "Odysseus' Bow", 'Toxic Blade', 'Asi', 'Ancile', "Atalanta's Bow", "Berserker's Shield", 'Blackthorn Hammer', 'Bloodforge', "Brawler's Beat Stick", 'Deathbringer', "Devourer's Gauntlet", 'Frostbound Hammer', "Gladiator's Shield", 'Heartseeker', "Hydra's Lament", 'Ichaival', "Jotunn's Wrath", 'Malice', 'Poisoned Star', "Qin's Sais", 'Rage', 'Runeforged Hammer', 'Runic Shield', "Shifter's Shield", 'Silverbranch Bow', 'Soul Eater', 'The Crusher', 'The Executioner', "Titan's Bane", 'Transcendence', 'Void Shield', 'Wind Demon'];
 const physical_melee = ['Masamune', 'Golden Blade', 'Hastened Katana', 'Stone Cutting Sword'];
 const magical_items = ["Shoes of the Magi", "Shoes of Focus", "Reinforced Shoes", "Traveler's Shoes", "Bancroft's Talon", 'Book of the Dead', 'Book of Thoth', 'Celestial Legion Helm', "Chronos' Pendant", 'Demonic Grip', 'Divine Ruin', 'Doom Orb', 'Dynasty Plate Helm', 'Ethereal Staff', 'Gem of Isolation', 'Hastened Ring', "Jade Emperor's Crown", 'Lotus Crown', 'Obsidian Shard', 'Polynomicon', "Pythagorem's Piece", 'Rod of Asclepius', 'Rod of Tahuti', "Shaman's Ring", 'Soul Gem', 'Soul Reaver', 'Spear of Desolation', 'Spear of the Magus', 'Stone of Binding', 'Stone of Fal', 'Telkhines Ring', "Typhon's Fang", 'Void Stone', "Warlock's Staff"];
-const ratatoskr_items = ['Acorn of Yggdrasil'];
+const ratatoskr_item = 'Acorn of Yggdrasil';
 const barons_consumables = ["Baron's Brew"];
 const general_masks = ["Bumba's Mask"];
 const warrior_guardian_mask = ["Rangda's Mask"];
@@ -39,12 +39,6 @@ $("#submit").click(function () {
 
   if (selected_mode !== "Conquest") {
     selected_blessings = selected_blessings.concat(blessings);
-  }
-
-  if (selected_god === "Baron Samedi") {
-    selected_consumables = selected_consumables.concat(barons_consumables);
-  } else if (selected_god === "Ratatoskr") {
-    selected_items = selected_items.concat(ratatoskr_items);
   }
 
   if (assassains.includes(selected_god)) {
@@ -79,6 +73,10 @@ $("#submit").click(function () {
     selected_consumables = selected_consumables.concat(power_potions[1]);
   }
 
+  if (selected_god === "Baron Samedi") {
+    selected_consumables = selected_consumables.concat(barons_consumables);
+  }
+
   if (selected_mode == 'Assault') {
     for (let i = selected_items.length - 1; i >= 0; i--) {
       if (not_assault.includes(selected_items[i])) {
@@ -92,6 +90,12 @@ $("#submit").click(function () {
   shuffle(selected_consumables);
   shuffle(selected_relics);
 
+  // special rat items
+  if (selected_god === "Ratatoskr") {
+    selected_items[0] = ratatoskr_item;
+    setSubtraction(selected_items, boots); // rat can't build boots
+    console.log(selected_items);
+  }
 
   // get elements
   const blessingUL = document.querySelector('#blessing');
