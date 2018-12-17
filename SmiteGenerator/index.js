@@ -215,6 +215,22 @@ function append_img_with_loading(imgElement, parentElement) {
 function get_pic(item_name) {
   const itemImg = document.createElement('img');
   itemImg.title = item_name;
+
+  //special case for mask graphics
+  if (masks.includes(item_name)) {
+    item_name = item_name.replace(/ /g, '');
+    item_name = item_name.replace(/\'/, '');
+    itemImg.src = "Graphics/" + item_name + "_T3.png";
+    return itemImg;
+  } else if (item_name === 'Heartseeker') { //special case for heartseaker
+    itemImg.src = "https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/9/97/Heartseeker_T3.png?version=6fdb168d908c99e05dea8fb7614344a7";
+    return itemImg;
+  } else if (item_name === "Magi's Cloak") {  //special case for magis cloak
+    itemImg.src = "https://d1u5p3l4wpay3k.cloudfront.net/smite_gamepedia/1/18/MagisBlessing_T3.png?version=5fcceaa928978ae11bb17768d5a55bc9";
+    return itemImg;
+  }
+
+  itemImg.title = item_name;
   item_name = item_name.toLowerCase();
   item_name = item_name.replace(/ /g, '-');
   item_name = item_name.replace('\'', '');
@@ -228,6 +244,5 @@ function get_blessing_pic(item_name) {
   item_name = item_name.replace(/ /g, '');
   item_name = item_name.replace(/\'/, '');
   itemImg.src = "Graphics/" + item_name + ".png";
-  itemImg.title = pretty_name;
   return itemImg;
 }
