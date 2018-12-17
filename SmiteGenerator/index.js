@@ -4,7 +4,7 @@ const mages = ['Agni', 'Ah Puch', 'Anubis', 'Ao Kuang', 'Aphrodite', 'Baron Same
 const warriors = ['Achilles', 'Amaterasu', 'Bellona', 'Chaac', 'Cu Chulainn', 'Erlang Shen', 'Guan Yu', 'Hercules', 'King Arthur', 'Nike', 'Odin', 'Osiris', 'Sun Wukong', 'Tyr', 'Vamana']
 const hunters = ['Ah Muzen Cab', 'Anhur', 'Apollo', 'Artemis', 'Cernunnos', 'Chernobog', 'Chiron', 'Cupid', 'Hachiman', 'Hou Yi', 'Izanami', 'Jing Wei', 'Medusa', 'Neith']
 const relics = ['Purification Beads', 'Heavenly Wings', 'Blink Rune', 'Cursed Ankh', 'Meditation Cloak', 'Phantom Veil', 'Aegis Amulet', 'Magic Shell', 'Sundering Spear', 'Teleport Glyph', 'Shield of Thorns', 'Horrific Emblem', 'Bracer of Undoing', 'Belt of Frenzy']
-const consumables = ['Potion of Magical Might', 'Potion of Physical Might', 'Healing Potion', 'Mana Potion', 'Ward', 'Elixir of Power', 'Elixir of Defense', 'Sentry Ward', 'Multi Potion', 'Chalice of Healing', 'Chalice of Mana', 'Chalice of the Oracle']
+const consumables = ['Healing Potion', 'Mana Potion', 'Ward', 'Elixir of Power', 'Elixir of Defense', 'Sentry Ward', 'Multi Potion', 'Chalice of Healing', 'Chalice of Mana', 'Chalice of the Oracle']
 const basic_items = ["Oni Hunter's Garb", "Genji's Guard", 'Breastplate of Valor', 'Mantle of Discord', 'Spirit Robe', 'Witchblade', "Shogun's Kusari", 'Spectral Armor', 'Relic Dagger', 'Shield of Regrowth', 'Hide of the Urchin', "Emperor's Armor", "Magi's Cloak", 'Stone of Gaia', 'Pestilence', 'Winged Blade', 'Bulwark of Hope', 'Sovereignty', 'Mail of Renewal', 'Heartward Amulet', 'Gauntlet of Thebes', 'Midgardian Mail', 'Hide of the Nemean Lion', 'Mystical Mail', 'Talisman of Energy']
 const physical_items = ["Odysseus' Bow", 'Toxic Blade', 'Asi', 'Ninja Tabi', 'Reinforced Greaves', 'Talaria Boots', 'Warrior Tabi', 'Ancile', "Atalanta's Bow", "Berserker's Shield", 'Blackthorn Hammer', 'Bloodforge', "Brawler's Beat Stick", 'Deathbringer', "Devourer's Gauntlet", 'Frostbound Hammer', "Gladiator's Shield", 'Heartseeker', "Hydra's Lament", 'Ichaival', "Jotunn's Wrath", 'Malice', 'Poisoned Star', "Qin's Sais", 'Rage', 'Runeforged Hammer', 'Runic Shield', "Shifter's Shield", 'Silverbranch Bow', 'Soul Eater', 'The Crusher', 'The Executioner', "Titan's Bane", 'Transcendence', 'Void Shield', 'Wind Demon']
 const physical_melee = ['Masamune', 'Golden Blade', 'Hastened Katana', 'Stone Cutting Sword']
@@ -16,6 +16,7 @@ const warrior_guardian_mask = ["Rangda's Mask"]
 const mage_hunter_assassain_mask = ["Lono's Mask"]
 const blessings = ["Attacker's Blessing", "Defender's Blessing", "Specialist's Blessing"]
 const conquest_blessings = ["Assassin's Blessing", "Guardian's Blessing", "Hunter's Blessing", "Warrior's Blessing", "Mage's Blessing"]
+const power_potions = ['Potion of Magical Might', 'Potion of Physical Might']
 
 // needed for functions defined outside of the on-submit event function
 let selected_blessings; 
@@ -24,7 +25,6 @@ let selected_blessings;
 const IMG_SIZES = '128px';
 const IMG_PADDING = '4px';
 
-//TODO: clear lists at end???
 $("#submit").click(function () {
   let selected_god = $("#god_list option:selected").text();
   let selected_mode = $("#mode_list option:selected").text();
@@ -48,27 +48,32 @@ $("#submit").click(function () {
     selected_items = selected_items.concat(physical_items);
     selected_items = selected_items.concat(physical_melee);
     selected_items = selected_items.concat(mage_hunter_assassain_mask);
+    selected_consumables = selected_consumables.concat(power_potions[1]);
   }
 
   if (guardians.includes(selected_god)) {
     selected_items = selected_items.concat(magical_items);
     selected_items = selected_items.concat(warrior_guardian_mask);
+    selected_consumables = selected_consumables.concat(power_potions[0]);
   }
 
   if (mages.includes(selected_god)) {
     selected_items = selected_items.concat(magical_items);
     selected_items = selected_items.concat(mage_hunter_assassain_mask);
+    selected_consumables = selected_consumables.concat(power_potions[0]);
   }
 
   if (warriors.includes(selected_god)) {
     selected_items = selected_items.concat(physical_items);
     selected_items = selected_items.concat(physical_melee);
     selected_items = selected_items.concat(warrior_guardian_mask);
+    selected_consumables = selected_consumables.concat(power_potions[1]);
   }
 
   if (hunters.includes(selected_god)) {
     selected_items = selected_items.concat(mage_hunter_assassain_mask);
     selected_items = selected_items.concat(physical_items);
+    selected_consumables = selected_consumables.concat(power_potions[1]);
   }
 
 
