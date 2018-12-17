@@ -19,6 +19,7 @@ const mage_hunter_assassain_mask = ["Lono's Mask"];
 const blessings = ["Attacker's Blessing", "Defender's Blessing", "Specialist's Blessing"];
 const conquest_blessings = ["Assassin's Blessing", "Guardian's Blessing", "Hunter's Blessing", "Warrior's Blessing", "Mage's Blessing"];
 const not_assault = ["Book of Thoth", "Warlock's Staff", "Transcendence", "Devourer's Gauntlet"];
+const not_siege = ['Ward', 'Chalice of the Oracle'];
 const power_potions = ['Potion of Magical Might', 'Potion of Physical Might'];
 
 // needed for functions defined outside of the on-submit event function
@@ -39,6 +40,10 @@ $("#submit").click(function () {
 
   if (selected_mode !== "Conquest") {
     selected_blessings = selected_blessings.concat(blessings);
+  }
+
+  if (selected_mode === 'Siege') {
+    setSubtraction(selected_consumables, not_siege);
   }
 
   if (assassains.includes(selected_god)) {
@@ -94,7 +99,6 @@ $("#submit").click(function () {
   if (selected_god === "Ratatoskr") {
     selected_items[0] = ratatoskr_item;
     setSubtraction(selected_items, boots); // rat can't build boots
-    console.log(selected_items);
   }
 
   // get elements
