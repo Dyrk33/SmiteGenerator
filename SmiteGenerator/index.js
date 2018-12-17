@@ -5,21 +5,23 @@ const warriors = ['Achilles', 'Amaterasu', 'Bellona', 'Chaac', 'Cu Chulainn', 'E
 const hunters = ['Ah Muzen Cab', 'Anhur', 'Apollo', 'Artemis', 'Cernunnos', 'Chernobog', 'Chiron', 'Cupid', 'Hachiman', 'Hou Yi', 'Izanami', 'Jing Wei', 'Medusa', 'Neith'];
 const relics = ['Purification Beads', 'Heavenly Wings', 'Blink Rune', 'Cursed Ankh', 'Meditation Cloak', 'Phantom Veil', 'Aegis Amulet', 'Magic Shell', 'Sundering Spear', 'Teleport Glyph', 'Shield of Thorns', 'Horrific Emblem', 'Bracer of Undoing', 'Belt of Frenzy'];
 const consumables = ['Potion of Magical Might', 'Potion of Physical Might', 'Healing Potion', 'Mana Potion', 'Ward', 'Elixir of Power', 'Elixir of Defense', 'Sentry Ward', 'Multi Potion', 'Chalice of Healing', 'Chalice of Mana', 'Chalice of the Oracle'];
+const masks = ["Bumba's Mask", "Rangda's Mask", "Lono's Mask"];
+const boots = ['Ninja Tabi', 'Reinforced Greaves', 'Talaria Boots', 'Warrior Tabi', "Shoes of the Magi", "Shoes of Focus", "Reinforced Shoes", "Traveler's Shoes"]
 const basic_items = ["Oni Hunter's Garb", "Genji's Guard", 'Breastplate of Valor', 'Mantle of Discord', 'Spirit Robe', 'Witchblade', "Shogun's Kusari", 'Spectral Armor', 'Relic Dagger', 'Shield of Regrowth', 'Hide of the Urchin', "Emperor's Armor", "Magi's Cloak", 'Stone of Gaia', 'Pestilence', 'Winged Blade', 'Bulwark of Hope', 'Sovereignty', 'Mail of Renewal', 'Heartward Amulet', 'Gauntlet of Thebes', 'Midgardian Mail', 'Hide of the Nemean Lion', 'Mystical Mail', 'Talisman of Energy'];
-const physical_items = ["Odysseus' Bow", 'Toxic Blade', 'Asi', 'Ninja Tabi', 'Reinforced Greaves', 'Talaria Boots', 'Warrior Tabi', 'Ancile', "Atalanta's Bow", "Berserker's Shield", 'Blackthorn Hammer', 'Bloodforge', "Brawler's Beat Stick", 'Deathbringer', "Devourer's Gauntlet", 'Frostbound Hammer', "Gladiator's Shield", 'Heartseeker', "Hydra's Lament", 'Ichaival', "Jotunn's Wrath", 'Malice', 'Poisoned Star', "Qin's Sais", 'Rage', 'Runeforged Hammer', 'Runic Shield', "Shifter's Shield", 'Silverbranch Bow', 'Soul Eater', 'The Crusher', 'The Executioner', "Titan's Bane", 'Transcendence', 'Void Shield', 'Wind Demon'];
+const physical_items = ['Ninja Tabi', 'Reinforced Greaves', 'Talaria Boots', 'Warrior Tabi', "Odysseus' Bow", 'Toxic Blade', 'Asi', 'Ancile', "Atalanta's Bow", "Berserker's Shield", 'Blackthorn Hammer', 'Bloodforge', "Brawler's Beat Stick", 'Deathbringer', "Devourer's Gauntlet", 'Frostbound Hammer', "Gladiator's Shield", 'Heartseeker', "Hydra's Lament", 'Ichaival', "Jotunn's Wrath", 'Malice', 'Poisoned Star', "Qin's Sais", 'Rage', 'Runeforged Hammer', 'Runic Shield', "Shifter's Shield", 'Silverbranch Bow', 'Soul Eater', 'The Crusher', 'The Executioner', "Titan's Bane", 'Transcendence', 'Void Shield', 'Wind Demon'];
 const physical_melee = ['Masamune', 'Golden Blade', 'Hastened Katana', 'Stone Cutting Sword'];
-const magical_items = ["Bancroft's Talon", 'Book of the Dead', 'Book of Thoth', 'Celestial Legion Helm', "Chronos' Pendant", 'Demonic Grip', 'Divine Ruin', 'Doom Orb', 'Dynasty Plate Helm', 'Ethereal Staff', 'Gem of Isolation', 'Hastened Ring', "Jade Emperor's Crown", 'Lotus Crown', 'Obsidian Shard', 'Polynomicon', "Pythagorem's Piece", 'Rod of Asclepius', 'Rod of Tahuti', "Shaman's Ring", 'Soul Gem', 'Soul Reaver', 'Spear of Desolation', 'Spear of the Magus', 'Stone of Binding', 'Stone of Fal', 'Telkhines Ring', "Typhon's Fang", 'Void Stone', "Warlock's Staff"];
+const magical_items = ["Shoes of the Magi", "Shoes of Focus", "Reinforced Shoes", "Traveler's Shoes", "Bancroft's Talon", 'Book of the Dead', 'Book of Thoth', 'Celestial Legion Helm', "Chronos' Pendant", 'Demonic Grip', 'Divine Ruin', 'Doom Orb', 'Dynasty Plate Helm', 'Ethereal Staff', 'Gem of Isolation', 'Hastened Ring', "Jade Emperor's Crown", 'Lotus Crown', 'Obsidian Shard', 'Polynomicon', "Pythagorem's Piece", 'Rod of Asclepius', 'Rod of Tahuti', "Shaman's Ring", 'Soul Gem', 'Soul Reaver', 'Spear of Desolation', 'Spear of the Magus', 'Stone of Binding', 'Stone of Fal', 'Telkhines Ring', "Typhon's Fang", 'Void Stone', "Warlock's Staff"];
 const ratatoskr_items = ['Acorn of Yggdrasil'];
-const barons_consumables = ['Baron\'s Brew'];
+const barons_consumables = ["Baron's Brew"];
 const general_masks = ["Bumba's Mask"];
 const warrior_guardian_mask = ["Rangda's Mask"];
 const mage_hunter_assassain_mask = ["Lono's Mask"];
 const blessings = ["Attacker's Blessing", "Defender's Blessing", "Specialist's Blessing"];
 const conquest_blessings = ["Assassin's Blessing", "Guardian's Blessing", "Hunter's Blessing", "Warrior's Blessing", "Mage's Blessing"];
-const not_assault = ["Book of Thoth", "Warlock's Staff", "Transcendence", "Devourer's Gauntlet" ];
+const not_assault = ["Book of Thoth", "Warlock's Staff", "Transcendence", "Devourer's Gauntlet"];
 
 // needed for functions defined outside of the on-submit event function
-let selected_blessings; 
+let selected_blessings;
 
 // image sizes in string form
 const IMG_SIZES = '128px';
@@ -125,8 +127,16 @@ $("#submit").click(function () {
   for (let i = 0; i <= 5; i++) {
     let img = get_pic(selected_items[i]);
     append_img_with_loading(img, itemListElement);
+    // prevent duplicate boots:
+    if (boots.includes(selected_items[i])) {
+      setSubtraction(selected_items, boots); // remove all other boots
+    } else if (masks.includes(selected_items[i])) {
+      // prevent duplicate masks:
+      setSubtraction(selected_items, masks);
+    }
   }
   items1Element.appendChild(itemListElement);
+  console.log(selected_items);
 
   // add 2 consumables to list
   const consumableListElement = document.createElement('li');
@@ -146,13 +156,14 @@ $("#submit").click(function () {
 
 });
 
-function arrContainsString(arr, str) {
-  for (const item in arr) {
-    if (str == item) {
-      return true;
+// given arrays A and B, does the following:
+// A = A - B (like set subtraction)
+function setSubtraction(a, b) {
+  for (let i = a.length - 1; i >= 0; i--) {
+    if (b.includes(a[i])) {
+      a.splice(i, 1);
     }
   }
-  return false;
 }
 
 function shuffle(a) {
