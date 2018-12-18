@@ -29,6 +29,22 @@ let selected_blessings;
 const IMG_SIZES = '128px';
 const IMG_PADDING = '4px';
 
+$("#random-god").click(function() {
+  const select = document.querySelector("#god_list");
+  const options = select.children;
+
+  const random = Math.floor(Math.random() * options.length);
+  select.value = options[random].value;
+});
+
+$("#random-gamemode").click(function() {
+  const select = document.querySelector("#mode_list");
+  const options = select.children;
+
+  const random = Math.floor(Math.random() * options.length);
+  select.value = options[random].value;
+});
+
 $("#submit").click(function () {
   let selected_god = $("#god_list option:selected").text();
   let selected_mode = $("#mode_list option:selected").text();
@@ -149,7 +165,6 @@ $("#submit").click(function () {
     }
   }
   items1Element.appendChild(itemListElement);
-  console.log(selected_items);
 
   // add 2 consumables to list
   const consumableListElement = document.createElement('li');
