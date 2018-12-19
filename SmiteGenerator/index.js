@@ -46,6 +46,9 @@ $("#random-gamemode").click(function() {
 });
 
 $("#submit").click(function () {
+  let boots_checkbox = document.querySelector("#boots_checkbox").checked;
+  let threek_checkbox = document.querySelector("#threek_checkbox").checked;
+  let power_checkbox = document.querySelector("#power_checkbox").checked;
   let selected_god = $("#god_list option:selected").text();
   let selected_mode = $("#mode_list option:selected").text();
   let selected_consumables = consumables;
@@ -60,6 +63,10 @@ $("#submit").click(function () {
 
   if (selected_mode === 'Siege') {
     setSubtraction(selected_consumables, not_siege);
+  }
+
+  if (threek_checkbox) {
+    setSubtraction(selected_consumables, ['Elixir of Power', 'Elixir of Defense']);
   }
 
   if (assassains.includes(selected_god)) {
@@ -94,6 +101,10 @@ $("#submit").click(function () {
     selected_consumables = selected_consumables.concat(power_potions[1]);
   }
 
+  if (power_checkbox) {
+    setSubtraction(selected_consumables, power_potions);
+  }
+
   if (selected_god === "Baron Samedi") {
     selected_consumables = selected_consumables.concat(barons_consumables);
   }
@@ -110,6 +121,16 @@ $("#submit").click(function () {
   shuffle(selected_items);
   shuffle(selected_consumables);
   shuffle(selected_relics);
+
+  if (boots_checkbox) {
+    let i = 0;
+    while (!boots.includes(selected_items[i])) {
+      i++;
+    }
+    let temp = selected_items[0];
+    selected_items[0] = selected_items[i];
+    selected_items[i] = temp;
+  }
 
   // special rat items
   if (selected_god === "Ratatoskr") {
